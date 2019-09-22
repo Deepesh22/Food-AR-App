@@ -1,0 +1,16 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 10.06.2011 15:45:20
+
+newmtl wire_225143087
+	Ns 0.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.8824 0.8824 0.8824
+	Kd 0.8824 0.8824 0.8824
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0176 0.0176 0.0176
+	map_Ka 10861 Ice Cream_v1.jpg
+	map_Kd 10861 Ice Cream_v1.jpg

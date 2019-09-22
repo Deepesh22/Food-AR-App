@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DL0-Yg-oKP">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Food AR-->
+        <scene sceneID="Ghn-gR-o7Q">
+            <objects>
+                <tableViewController id="1S1-gU-DAa" customClass="MainViewController" customModule="Food_AR" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XiW-4F-gze">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="main" id="tbt-0b-jEe">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tbt-0b-jEe" id="h8R-KL-src">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1S1-gU-DAa" id="wfd-Ko-yU0"/>
+                            <outlet property="delegate" destination="1S1-gU-DAa" id="Mhb-4A-3Ux"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Food AR" id="QbB-dy-4k4"/>
+                    <connections>
+                        <segue destination="uay-4f-jVQ" kind="show" identifier="goToMenu" id="vJ6-sF-NP0"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hoI-KM-yJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926.08695652173924" y="-13.392857142857142"/>
+        </scene>
+        <!--Menu Table View Controller-->
+        <scene sceneID="F7E-5h-nbK">
+            <objects>
+                <tableViewController id="uay-4f-jVQ" customClass="MenuTableViewController" customModule="Food_AR" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="okZ-Bv-3IC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="menu" id="jEp-QI-mQh">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jEp-QI-mQh" id="luL-EE-d7H">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uay-4f-jVQ" id="lXy-Cd-Nha"/>
+                            <outlet property="delegate" destination="uay-4f-jVQ" id="ZPe-bE-5WC"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="ZV8-DV-iRq" kind="show" identifier="goToAR" id="iho-3c-qtX"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8KM-0C-ldD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1600.0000000000002" y="-9.375"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2cd-td-v2j">
+            <objects>
+                <viewController id="ZV8-DV-iRq" customClass="ARViewController" customModule="Food_AR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w1R-eL-b6A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ni5-XK-mcn">
+                                <rect key="frame" x="0.0" y="0.0" width="423" height="896"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ni5-XK-mcn" secondAttribute="trailing" constant="-9" id="7iG-Nq-eDv"/>
+                            <constraint firstAttribute="bottom" secondItem="Ni5-XK-mcn" secondAttribute="bottom" id="LBl-Oa-cP5"/>
+                            <constraint firstItem="Ni5-XK-mcn" firstAttribute="leading" secondItem="Qep-KA-uL5" secondAttribute="leading" id="U4u-5v-hms"/>
+                            <constraint firstItem="Ni5-XK-mcn" firstAttribute="top" secondItem="w1R-eL-b6A" secondAttribute="top" id="yAV-xk-q7e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qep-KA-uL5"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="Ni5-XK-mcn" id="bJl-FZ-T8F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3N3-cm-nc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2272.463768115942" y="-12.053571428571429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zun-pm-CqP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DL0-Yg-oKP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bwk-JJ-xNY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1S1-gU-DAa" kind="relationship" relationship="rootViewController" id="Wma-rf-lff"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zEO-ic-8DK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15.942028985507248" y="-13.392857142857142"/>
+        </scene>
+    </scenes>
+</document>
